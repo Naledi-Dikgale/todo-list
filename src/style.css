@@ -12,6 +12,7 @@
   box-sizing: border-box;
   font-family: 'Ubuntu', monospace;
 }
+
 html {
   font-size: 20px;
 }
@@ -31,12 +32,14 @@ body {
   position: relative;
   overflow: hidden;
 }
+
 header {
   width: 100%;
   height: var(--header-height);
   background-size: cover;
   border-radius: 5px 5px 0 0;
 }
+
 .header {
   width: 100%;
   height: 70px;
@@ -50,7 +53,7 @@ header {
 }
 
 .fresher {
-margin-right: 30px;
+  margin-right: 30px;
 }
 
 .add-todo {
@@ -58,27 +61,30 @@ margin-right: 30px;
   height: 50px;
   padding: 0.25rem 0;
 }
+
 .add-todo form {
   display: flex;
   align-items: center;
   border-bottom: 2px solid #fff;
 }
+
 .add-todo form input {
   flex: 1;
   height: 30px;
   background-color: transparent;
   border: none;
-  border-right: 0px;
+  border-right: 0;
   outline: transparent;
   padding-left: 0.5rem;
   font-size: 1rem;
   color: #5a5459;
+}
 
-}
-.add-todo form input:focus{
+.add-todo form input:focus {
   border: 5px white;
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.14) , 0px 1px 10px 0px rgba(0,0,0,0.12) , 0px 2px 4px -1px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
+
 .add-todo form button {
   width: 60px;
   height: 50px;
@@ -86,7 +92,7 @@ margin-right: 30px;
   background-color: transparent;
   color: rgb(143, 143, 143);
   border: none;
-  border-left: 0px;
+  border-left: 0;
   cursor: pointer;
 }
 
