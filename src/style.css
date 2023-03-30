@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 :root {
   --container-height: 400px;
@@ -10,7 +10,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', monospace;
+  font-family: "Ubuntu", monospace;
 }
 
 html {
@@ -78,6 +78,7 @@ header {
   padding-left: 0.5rem;
   font-size: 1rem;
   color: #5a5459;
+  margin-left: 5px;
 }
 
 .add-todo form input:focus {
@@ -87,7 +88,7 @@ header {
 
 .add-todo form button {
   width: 60px;
-  height: 50px;
+  height: 40px;
   font-size: 1rem;
   background-color: transparent;
   color: rgb(143, 143, 143);
@@ -96,19 +97,8 @@ header {
   cursor: pointer;
 }
 
-.list-element {
-  display: flex;
-  width: 100%;
-  border-bottom: 2px solid white;
-}
-
-.label {
-  color: #5a5459;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 0.75rem 0.5rem;
-  border-radius: 5px;
+.add-todo form button:hover {
+  text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.8);
 }
 
 #todo-list {
@@ -117,8 +107,66 @@ header {
   padding: 0.5rem;
   border-radius: 0 0 5px 5px;
   width: 100%;
+  border: 1px solid rgb(219, 219, 219);
+  overflow: scroll;
 }
 
-.bi .bi-circle {
-  color: gray;
+#todo-list .todo {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  border-radius: 5px;
+  border-bottom: 2px solid #fff;
+}
+
+#todo-list .todo:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#todo-list .todo * {
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+#todo-list .todo i {
+  font-size: 0.9rem;
+}
+
+#todo-list .todo p {
+  flex: 1;
+  word-break: break-all;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: grey;
+}
+
+#todo-list .todo .bi-pencil-square {
+  color: rgb(31, 177, 48);
+}
+
+#todo-list .todo .bi-trash {
+  color: rgb(236, 82, 82);
+  margin: 0;
+}
+
+.notification {
+  position: absolute;
+  width: calc(3 * var(--contaier-width) / 4);
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  border-radius: 8px;
+  background-color: rgb(230, 150, 150);
+  top: 10px;
+  right: calc(-3 * var(--contaier-width) / 4);
+  color: #fff;
+  transition: 300ms right ease-in-out;
+}
+
+.notif-enter {
+  right: 10px;
 }
