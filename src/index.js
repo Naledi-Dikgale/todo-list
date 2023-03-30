@@ -1,3 +1,5 @@
+import './style.css';
+
 // SELECT ELEMENTS
 const form = document.getElementById('todo-form');
 const todoTextInput = document.getElementById('todo-input');
