@@ -10,13 +10,19 @@ const clearSelected = document.querySelector('.clearChecked');
 
 const renderTodo = () => {
   const list = document.getElementById('todo-list');
-  const delicon = document.createElement('i');
-  const drag = document.createElement('i');
+
   list.innerHTML = '';
   todoList.sort((a, b) => a.index - b.index); // sort tasks by index
 
+  const handleDelete = (task) => {
+    todoList = todoList.filter((element) => element !== task);
+    renderTodo();
+  };
+
   for (let i = 0; i < todoList.length; i += 1) {
     const task = todoList[i];
+    const drag = document.createElement('i');
+    const delicon = document.createElement('i');
     const listItem = document.createElement('li');
     listItem.className = 'list-element';
 
@@ -51,10 +57,7 @@ const renderTodo = () => {
     delicon.style.display = 'none';
     delicon.className = 'fa-solid fa-trash';
     delicon.classList.add('delicon');
-    delicon.addEventListener('click', () => {
-      todoList = todoList.filter((element) => element !== task);
-      renderTodo();
-    });
+    delicon.addEventListener('click', () => handleDelete(task));
 
     // creating the drag button
     drag.className = 'fa-solid fa-ellipsis-vertical';
