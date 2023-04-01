@@ -3,7 +3,7 @@ import {
 } from './variables';
 
 const todoListFunc = () => {
-  let todoList = [];
+  let todoList = JSON.parse(localStorage.getItem('todoList')) || [];
 
   const renderTodo = () => {
     const list = document.getElementById('todo-list');
@@ -13,6 +13,7 @@ const todoListFunc = () => {
 
     const handleDelete = (task) => {
       todoList = todoList.filter((element) => element !== task);
+      localStorage.setItem('todoList', JSON.stringify(todoList));
       renderTodo();
     };
 
@@ -79,6 +80,7 @@ const todoListFunc = () => {
           index: todoList.length,
         },
       );
+      localStorage.setItem('todoList', JSON.stringify(todoList));
       textInput.value = '';
       renderTodo();
     }
@@ -97,6 +99,7 @@ const todoListFunc = () => {
 
   clearSelected.addEventListener('click', () => {
     todoList = todoList.filter((element) => element.completed !== true);
+    localStorage.setItem('todoList', JSON.stringify(todoList));
     renderTodo();
   });
 
