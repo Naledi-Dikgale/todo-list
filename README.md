@@ -112,7 +112,6 @@ open index.html in your browser
 
 ## 👥 Authors <a name="Naledi Dikgale"></a>
 
-> Mention all of the collaborators of this project.
 
 👤 **Naledi Dikgale**
 
