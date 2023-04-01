@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+:root {
+  --container-height: 400px;
+  --contaier-width: 400px;
+  --header-height: 150px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', monospace;
+}
+
+html {
+  font-size: 20px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background-color: rgb(242, 245, 240);
+  width: var(--contaier-width);
+  height: var(--container-height);
+  position: relative;
+  overflow: hidden;
+}
+
+header {
+  width: 100%;
+  height: var(--header-height);
+  background-size: cover;
+  border-radius: 5px 5px 0 0;
+}
+
+.header {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #5a5459;
+  font-weight: 900;
+  margin-left: 10px;
+  border-bottom: 2px solid #fff;
+}
+
+.fresher {
+  margin-right: 30px;
+}
+
+.add-todo {
+  width: 100%;
+  height: 50px;
+  padding: 0.25rem 0;
+}
+
+.add-todo form {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #fff;
+}
+
+.add-todo form input {
+  flex: 1;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-right: 0;
+  outline: transparent;
+  padding-left: 0.5rem;
+  font-size: 1rem;
+  color: #5a5459;
+}
+
+.add-todo form input:focus {
+  border: 5px white;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.add-todo form button {
+  width: 60px;
+  height: 50px;
+  font-size: 1rem;
+  background-color: transparent;
+  color: rgb(143, 143, 143);
+  border: none;
+  border-left: 0;
+  cursor: pointer;
+}
+
+.list-element {
+  display: flex;
+  width: 100%;
+  border-bottom: 2px solid white;
+}
+
+.label {
+  color: #5a5459;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  border-radius: 5px;
+}
+
+#todo-list {
+  height: calc(var(--container-height) - var(--header-height));
+  background-color: rgb(242, 245, 240);
+  padding: 0.5rem;
+  border-radius: 0 0 5px 5px;
+  width: 100%;
+}
+
+.bi .bi-circle {
+  color: gray;
+}

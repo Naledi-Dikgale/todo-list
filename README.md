@@ -34,7 +34,7 @@
 
 
 
-**Todo-list-project** is a project to showcase my html,CSS and javascript skills applied in bulding a project
+**Todo-list-project** is a project to showcase my html,CSS and javascript skills applied in bulding a todo-list
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -159,7 +159,7 @@ I would like to thank my teammates.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](/MIT.md) licensed.
+This project is [LICENSE](/LICENSE.md) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
