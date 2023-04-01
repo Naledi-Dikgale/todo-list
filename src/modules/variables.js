@@ -5,6 +5,8 @@ const textInput = document.getElementById('todo-input');
 const clearSelected = document.querySelector('.clearChecked');
 
 // reset button
-  const refresh = document.querySelector('.fresher');
+const refresh = document.querySelector('.fresher');
 
-export {addTodo, textInput, clearSelected, refresh};
+export {
+  addTodo, textInput, clearSelected, refresh,
+};

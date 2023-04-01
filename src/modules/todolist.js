@@ -1,31 +1,32 @@
-import {addTodo, textInput, clearSelected, refresh} from './variables.js';
+import {
+  addTodo, textInput, clearSelected, refresh,
+} from './variables';
 
 const todoListFunc = () => {
-
   let todoList = [];
-  
+
   const renderTodo = () => {
     const list = document.getElementById('todo-list');
-  
+
     list.innerHTML = '';
     todoList.sort((a, b) => a.index - b.index); // sort tasks by index
-  
+
     const handleDelete = (task) => {
       todoList = todoList.filter((element) => element !== task);
       renderTodo();
     };
-  
+
     for (let i = 0; i < todoList.length; i += 1) {
       const task = todoList[i];
       const drag = document.createElement('i');
       const delicon = document.createElement('i');
       const listItem = document.createElement('li');
       listItem.className = 'list-element';
-  
+
       // create a checkbox and label for each task
       const checkTodo = document.createElement('div');
       checkTodo.className = 'chk-todo';
-  
+
       const todo = document.createElement('input');
       todo.className = 'todo';
       todo.value = task.description;
@@ -48,27 +49,27 @@ const todoListFunc = () => {
       // appending checkbox and todo together
       checkTodo.appendChild(checkbox);
       checkTodo.appendChild(todo);
-  
+
       // creating delete button
       delicon.style.display = 'none';
       delicon.className = 'fa-solid fa-trash';
       delicon.classList.add('delicon');
       delicon.addEventListener('click', () => handleDelete(task));
-  
+
       // creating the drag button
       drag.className = 'fa-solid fa-ellipsis-vertical';
       drag.classList.add('drag');
       drag.addEventListener('click', () => {
-  
+
       });
-  
+
       listItem.appendChild(checkTodo);
       listItem.appendChild(delicon);
       listItem.appendChild(drag);
       list.appendChild(listItem);
     }
   };
-  
+
   const todoAdder = () => {
     if (textInput.value !== '' || null) {
       todoList.push(
@@ -82,7 +83,7 @@ const todoListFunc = () => {
       renderTodo();
     }
   };
-  
+
   textInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
@@ -93,19 +94,19 @@ const todoListFunc = () => {
     event.preventDefault();
     todoAdder();
   });
-  
+
   clearSelected.addEventListener('click', () => {
     todoList = todoList.filter((element) => element.completed !== true);
     renderTodo();
   });
-  
+
   const refreshFunction = () => {
     refresh.addEventListener('click', () => {
       todoList = [];
       renderTodo();
     });
   };
-  refreshFunction()
+  refreshFunction();
   window.addEventListener('DOMContentLoaded', () => {
     renderTodo();
   });
