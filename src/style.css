@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 :root {
-  --container-height: 400px;
+  --container-height: fit-content;
   --contaier-width: 400px;
   --header-height: 150px;
 }
@@ -10,7 +10,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', monospace;
+  font-family: "Ubuntu", monospace;
 }
 
 html {
@@ -29,8 +29,10 @@ body {
   background-color: rgb(242, 245, 240);
   width: var(--contaier-width);
   height: var(--container-height);
+  max-height: 80vh;
   position: relative;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 header {
@@ -85,7 +87,7 @@ header {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
-.add-todo form button {
+.add-btn {
   width: 60px;
   height: 50px;
   font-size: 1rem;
@@ -96,13 +98,38 @@ header {
   cursor: pointer;
 }
 
+.add-btn:hover {
+  border: 1px solid gray;
+}
+
+.chk-todo {
+  display: flex;
+}
+
 .list-element {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   border-bottom: 2px solid white;
 }
 
-.label {
+i {
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.delicon:hover {
+  cursor: pointer;
+  background-color: tomato;
+}
+
+.drag:hover {
+  cursor: move;
+}
+
+.todo {
+  all: unset;
   color: #5a5459;
   display: flex;
   flex-direction: row;
@@ -121,4 +148,16 @@ header {
 
 .bi .bi-circle {
   color: gray;
+}
+
+.clearChecked {
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  font-size: large;
+  font-weight: 600;
+}
+
+.clearChecked:hover {
+  text-decoration: underline;
 }
