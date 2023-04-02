@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToDo List App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script defer src="main.js"></script></head>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ToDo List App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="header">
+        <h2>Today's To Do</h2><span><i class="fa fa-refresh fresher" aria-hidden="true"></i></span>
+      </div>
+      <div class="add-todo">
+        <form id="todo-form">
+          <input type="text" name="todo-input" id="todo-input" placeholder="Add your list ..." />
+          <button type="submit">
+            <button class="add-btn" id="add-btn">&#8617</button>
+          </button>
+        </form>
+      </div>
+    </header>
+
+    <ul id="todo-list">
+      <li class="todo">
+        <i 
+          class="bi bi-circle"
+          data-action="check"
+        ></i>
+        <p class="" data-action="check">todo one</p>
+        
+        <i class="bi bi-trash" data-action="delete"></i>
+      </li>
+    </ul>
+
+    <button class="clearChecked">Clear All Completed</button>
+
+  </div>
+</body>
+
+</html>
