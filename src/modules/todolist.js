@@ -2,6 +2,27 @@ import {
   addTodo, textInput, clearSelected, refresh,
 } from './variables';
 
+const todoAdder = () => {
+  if (textInput.value !== '' || null) {
+    todoList.push(
+      {
+        description: textInput.value,
+        completed: false,
+        index: todoList.length,
+      },
+    );
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+    textInput.value = '';
+    renderTodo();
+  }
+};
+
+const handleDelete = (task) => {
+  todoList = todoList.filter((element) => element !== task);
+  localStorage.setItem('todoList', JSON.stringify(todoList));
+  renderTodo();
+};
+
 const todoListFunc = () => {
   let todoList = JSON.parse(localStorage.getItem('todoList')) || [];
 
@@ -11,11 +32,13 @@ const todoListFunc = () => {
     list.innerHTML = '';
     todoList.sort((a, b) => a.index - b.index); // sort tasks by index
 
-    const handleDelete = (task) => {
-      todoList = todoList.filter((element) => element !== task);
-      localStorage.setItem('todoList', JSON.stringify(todoList));
-      renderTodo();
-    };
+    handleDelete(task)
+
+    // const handleDelete = (task) => {
+    //   todoList = todoList.filter((element) => element !== task);
+    //   localStorage.setItem('todoList', JSON.stringify(todoList));
+    //   renderTodo();
+    // };
 
     for (let i = 0; i < todoList.length; i += 1) {
       const task = todoList[i];
@@ -71,20 +94,8 @@ const todoListFunc = () => {
     }
   };
 
-  const todoAdder = () => {
-    if (textInput.value !== '' || null) {
-      todoList.push(
-        {
-          description: textInput.value,
-          completed: false,
-          index: todoList.length,
-        },
-      );
-      localStorage.setItem('todoList', JSON.stringify(todoList));
-      textInput.value = '';
-      renderTodo();
-    }
-  };
+  todoAdder()
+ 
 
   textInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
@@ -116,3 +127,4 @@ const todoListFunc = () => {
 };
 
 export default todoListFunc;
+export {todoAdder,handleDelete};
