@@ -32,7 +32,7 @@ const todoListFunc = () => {
     list.innerHTML = '';
     todoList.sort((a, b) => a.index - b.index); // sort tasks by index
 
-    handleDelete(task)
+    handleDelete(task);
 
     // const handleDelete = (task) => {
     //   todoList = todoList.filter((element) => element !== task);
@@ -94,8 +94,7 @@ const todoListFunc = () => {
     }
   };
 
-  todoAdder()
- 
+  todoAdder();
 
   textInput.addEventListener('keydown', (event) => {
     if (event.key === 'Enter') {
@@ -127,4 +126,4 @@ const todoListFunc = () => {
 };
 
 export default todoListFunc;
-export {todoAdder,handleDelete};
+export { todoAdder, handleDelete };
