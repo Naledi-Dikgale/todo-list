@@ -1,10 +1,10 @@
 /**
  * @jest-environment jsdom
  */
-import { todoAdder } from "./todolist";
+import { todoAdder } from './todolist';
 
-describe("todoAdder", () => {
-        document.body.innerHTML = `
+describe('todoAdder', () => {
+  document.body.innerHTML = `
         <body>
     <div class="container">
         <header>
@@ -38,10 +38,10 @@ describe("todoAdder", () => {
     </div>
     </body>`;
 
-    test('todoAdder', () => {
-        const textInput = document.getElementById('todo-input');
-        textInput.value = 'test';
-        todoAdder();
-        expect(textInput.value).toBe('test');
-    });
+  test('todoAdder', () => {
+    const textInput = document.getElementById('todo-input');
+    textInput.value = 'test';
+    todoAdder();
+    expect(textInput.value).toBe('test');
+  });
 });
