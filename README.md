@@ -118,9 +118,8 @@ open index.html in your browser
  *[NALEDI DIKGALE]*
  
 - GitHub: [@githubhandle](https://github.com/Naledi-Dikgale)
-- Twitter: [@twitterhandle](https://twitter.com/ChichiTheStar)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/naledi-dikgale-068423159/)
-- Website: [@Naledi-Dikgale](https://nalediportfolio.netlify.app/)
+- Website: [@Naledi-Dikgale](https://naledi.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
