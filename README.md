@@ -61,9 +61,7 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## 🚀 Live Demo <a name="live-demo">https://naledi-dikgale.github.io/todo-list/dist/</a>
-
-
+<!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
 
 
 - [Live Demo Link](https://naledi-dikgale.github.io/todo-list/dist/)
@@ -114,11 +112,12 @@ open index.html in your browser
 ## 👥 Authors <a name="Naledi Dikgale"></a>
 
 
-👤 **Naledi Dikgale**
-
-- GitHub: [@Naledi-Dikgale](https://github.com/Naledi-Dikgale)
-- LinkedIn: [naledi-dikgale-068423159](https://www.linkedin.com/in/naledi-dikgale-068423159/)
-
+👤 Author1
+ *[NALEDI DIKGALE]*
+ 
+- GitHub: [@githubhandle](https://github.com/Naledi-Dikgale)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/naledi-dikgale-068423159/)
+- Website: [@Naledi-Dikgale](https://nalediportfoliov3.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
